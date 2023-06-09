@@ -1,9 +1,9 @@
 import React from "react"
 
 let https    = 'https://'
-let randLink = 'randomlink.com'
-let price    = 33
-let imgUrl   = `${https}${randLink}`
+// let randLink = 'randomlink.com'
+// let price    = 33
+// let imgUrl   = `${https}${randLink}`
 
 let Product = ({
   imgUrl = `${https}home.com`,
