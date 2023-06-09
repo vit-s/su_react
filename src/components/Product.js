@@ -1,9 +1,6 @@
 import React from "react"
 
-let https    = 'https://'
-// let randLink = 'randomlink.com'
-// let price    = 33
-// let imgUrl   = `${https}${randLink}`
+let https = 'https://'
 
 let Product = ({
   imgUrl = `${https}home.com`,
@@ -18,7 +15,7 @@ let Product = ({
       <h2>{name}</h2>
       <img src={imgUrl} alt={imgUrl}/>
       <a href={link} target={`_blank`}>{linkName}</a>
-      <p>Price {price}</p>
+      <p>Price $<span>{price}</span></p>
       <button type={"button"}>Get it</button>
     </div>
   )

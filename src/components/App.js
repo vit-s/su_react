@@ -1,20 +1,18 @@
 import React   from "react"
 import './App.css'
 import Product from "./Product"
+import Section from "./Section"
 
 let App = () => {
   return (
     <>
       <h1>Welcome</h1>
-      <section>
-        <h2>Best product</h2>
+      <Section title={`Best products`}>
         <Product name={`Apples for sale`}/>
-
-      </section>
-      <section>
-        <h2>Recommended products</h2>
-        <Product/>
-      </section>
+      </Section>
+      <Section title={`Recommended`}>
+        <Product name={`Oranges`} price={`40`}/>
+      </Section>
     </>
   )
 }
