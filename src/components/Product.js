@@ -21,4 +21,10 @@ let Product = ({
   )
 }
 
+Product.defaultProps = {
+  imageURL: `google.com`,
+  price: `0`,
+
+}
+
 export default Product

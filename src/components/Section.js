@@ -1,8 +1,17 @@
 import React from "react"
 
-const Section = ({title, children}) => {
+const Section = ({
+  title = `No title!!`,
+  classSection,
+  idSection,
+  children,
+}) => {
+
   return (
-    <section>
+    <section
+      className={classSection ?? `def_class` }
+      id={idSection}
+    >
       <h2>{title}</h2>
       {children}
     </section>
