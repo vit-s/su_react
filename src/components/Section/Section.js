@@ -1,18 +1,19 @@
 import React from "react"
 
 const Section = ({
-  title = `No title!!`,
-  classSection,
+  title = `Default title!!`,
+  classSection = `def_class`,
+  classSectionTwo = 'def_class_two',
   idSection,
   children,
 }) => {
 
   return (
     <section
-      className={classSection ?? `def_class` }
+      className={`${classSection} ${classSectionTwo}`}
       id={idSection}
     >
-      <h2>{title}</h2>
+      {title && <h2>{title}</h2>}
       {children}
     </section>
   )

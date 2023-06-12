@@ -19,14 +19,21 @@
   color: white;
 }
 
-.block {
-  background: lightblue;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  font-size: calc(10px + 2vmin);
+/*.block {*/
+/*  background: lightcyan;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  width: 95vw;*/
+/*  font-size: calc(5px + 2vmin);*/
+/*  padding: 10px 0;*/
+/*  margin: auto;*/
+/*  outline: 1px solid lightblue;*/
+/*}*/
+
+h2 {
+  margin: 10px auto;
 }
 
 @keyframes App-logo-spin {

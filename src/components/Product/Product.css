@@ -1,0 +1,45 @@
+
+.Product {
+  background: lightseagreen;
+}
+
+.Product_name {
+  font-weight: 600;
+}
+
+.Product_qty {
+  font-weight: bold;
+  font-size: 20px;
+  color: darkslategrey;
+}
+
+.Product_qty span {
+  font-weight: normal;
+}
+
+.Product_qty.available {
+  color: green;
+}
+
+.Product_qty.not-available {
+  color: mediumvioletred;
+}
+
+a {
+  color: green;
+  border: 1px solid darkolivegreen;
+  border-radius: 5px;
+  padding: 5px;
+  background: lightblue;
+  margin: 10px 0;
+  font-size: calc(10px + 1vmin);
+}
+
+button {
+  padding: 5px 20px;
+  margin: 10px 0;
+  color: black;
+  background: lightgreen;
+  border: 1px solid darkolivegreen;
+  border-radius: 5px;
+}

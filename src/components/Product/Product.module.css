@@ -1,0 +1,64 @@
+.container {
+  background: lightseagreen;
+}
+
+.block {
+  background: lightcyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 95vw;
+  font-size: calc(5px + 2vmin);
+  padding: 10px 0;
+  margin: auto;
+  outline: 1px solid lightblue;
+}
+
+a {
+  color: green;
+  border: 1px solid darkolivegreen;
+  border-radius: 5px;
+  padding: 5px;
+  background: lightblue;
+  margin: 10px 0;
+  font-size: calc(10px + 1vmin);
+}
+
+button {
+  padding: 5px 20px;
+  margin: 10px 0;
+  color: black;
+  background: lightgreen;
+  border: 1px solid darkolivegreen;
+  border-radius: 5px;
+}
+
+.Product {
+  background: lightseagreen;
+}
+
+img {
+  width: 150px;
+  height: auto;
+}
+
+section {
+  padding: 10px 0;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.qty {
+  font-weight: normal;
+}
+
+.available {
+  color: green;
+}
+
+.not-available {
+  color: mediumvioletred;
+}
