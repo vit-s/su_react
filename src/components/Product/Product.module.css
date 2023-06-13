@@ -1,7 +1,3 @@
-.container {
-  background: lightseagreen;
-}
-
 .block {
   background: lightcyan;
   display: flex;
@@ -32,10 +28,6 @@ button {
   background: lightgreen;
   border: 1px solid darkolivegreen;
   border-radius: 5px;
-}
-
-.Product {
-  background: lightseagreen;
 }
 
 img {

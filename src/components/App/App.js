@@ -20,7 +20,7 @@ let App = () => {
       {/*Product section two*/}
       <Section classSection={`second_prod`} classSectionTwo={`second_prod_prod_block`} idSection={`recc_prod`}>
         <p>New classSection and ID</p>
-        <Product name={`Oranges`} price={100} qty={120} imgUrl={`https://images.unsplash.com/photo-1587223962930-cb7f31384c19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvY2t0YWlsfGVufDB8fDB8fHww&w=1000&q=80`}/>
+        <Product buyLink={`google.com`} buyLinkName={`Buy`} name={`Oranges`} price={100} qty={220} imgUrl={`https://images.unsplash.com/photo-1587223962930-cb7f31384c19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvY2t0YWlsfGVufDB8fDB8fHww&w=1000&q=80`}/>
       </Section>
     </>
   )

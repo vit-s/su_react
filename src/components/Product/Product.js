@@ -1,6 +1,6 @@
 import React from "react"
 // import "./Product.css"
-import './Product.module.css'
+import style from './Product.module.css'
 
 let https    = 'https://'
 let reg_link = 'google.com'
@@ -9,25 +9,25 @@ let Product = ({
   imgUrl = `${https}home.com`,
   name,
   price = 0,
-  link = `${https}home.com from the default`,
-  linkName = `Click from the default`,
+  buyLink = `${https}home.com from the default`,
+  buyLinkName = `Click from the default`,
   qty = 0,
 }) => {
   let PRODUCT_QTY = 50
   let inStock     = qty < PRODUCT_QTY
-  let qtyClasses  = ['Product_qty', inStock ? 'available' : 'not-available'].join(' ')
+  let qtyClasses  = ['Product_qty', inStock ? `${style.available}` : `${style['not-available']}`].join(' ')
 
   return (
-    <div className={`block Product`}>
+    <div className={`${style.block}`}>
       {
         name
-          ? <h2>{name}</h2>
+          ? <h2 className={`${style.name}`}>{name}</h2>
           : <p>Add name 👉 <a href="google.com">Edit profile</a></p>
       }
       <img src={imgUrl} alt={``}/>
-      <a href={link} target={`_blank`}>{linkName}</a>
+      <a href={buyLink} target={`_blank`}>{buyLinkName}</a>
       <p>Price $<span>{price}</span></p>
-      <p className={`Product_qty`}>Quantity: {qty} <span
+      <p className={`${style.qty}`}>Quantity: {qty} <span
         className={qtyClasses}>{inStock ? `Few left` : `In Stock`}</span></p>
       <button type={"button"}>Get it</button>
     </div>
