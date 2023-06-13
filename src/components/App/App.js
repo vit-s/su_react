@@ -14,12 +14,11 @@ let App = () => {
       <h2>Book list</h2>
       <BookList books={favoriteBooks}/>
       {/*New product section*/}
-      <Section title={`Best products`} idSection={`welc_prod`}>
+      <Section title={`Best`} idSection={`welc_prod`}>
         <Product name={`Anana`} price={20} qty={10} imgUrl={`https://images.unsplash.com/photo-1589606743932-747c74e7330e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5hbmFzfGVufDB8fDB8fHww&w=1000&q=80`}/>
       </Section>
       {/*Product section two*/}
-      <Section classSection={`second_prod`} classSectionTwo={`second_prod_prod_block`} idSection={`recc_prod`}>
-        <p>New classSection and ID</p>
+      <Section title={`Recommended`} classSection={`second_prod`} classSectionTwo={`second_prod_prod_block`} idSection={`recc_prod`}>
         <Product buyLink={`google.com`} buyLinkName={`Buy`} name={`Oranges`} price={100} qty={220} imgUrl={`https://images.unsplash.com/photo-1587223962930-cb7f31384c19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvY2t0YWlsfGVufDB8fDB8fHww&w=1000&q=80`}/>
       </Section>
     </>

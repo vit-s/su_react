@@ -1,3 +1,5 @@
+@value red-color from "../../variables.nodules.css";
+
 .block {
   background: lightcyan;
   display: flex;
@@ -43,14 +45,18 @@ section {
   font-weight: 600;
 }
 
+/*Composition*/
+
 .qty {
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .available {
+  composes: qty;
   color: green;
 }
 
 .not-available {
-  color: mediumvioletred;
+  composes: qty;
+  color: red-color;
 }

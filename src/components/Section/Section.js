@@ -1,7 +1,7 @@
 import React from "react"
 
 const Section = ({
-  title = `Default title!!`,
+  title = `Welcome title!`,
   classSection = `def_class`,
   classSectionTwo = 'def_class_two',
   idSection,

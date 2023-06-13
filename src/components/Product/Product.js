@@ -13,9 +13,11 @@ let Product = ({
   buyLinkName = `Click from the default`,
   qty = 0,
 }) => {
-  let PRODUCT_QTY = 50
-  let inStock     = qty < PRODUCT_QTY
-  let qtyClasses  = ['Product_qty', inStock ? `${style.available}` : `${style['not-available']}`].join(' ')
+  let PRODUCT_QTY = 50,
+      inStock     = qty < PRODUCT_QTY,
+      // let qtyClasses = ['Product_qty', inStock ? `${style.available}` : `${style['not-available']}`].join(' ')
+      qtyClasses  = inStock ? style.available : style[`not-available`],
+      fastConnect = 'online'
 
   return (
     <div className={`${style.block}`}>

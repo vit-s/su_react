@@ -9,6 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
   list-style: none;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 code {
