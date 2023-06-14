@@ -1,2 +1,0 @@
-Github-pages
-1. Create production Build.
