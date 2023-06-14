@@ -2,7 +2,7 @@
   "name": "su_react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vit-s.github.io/su_react",
+  "homepage": "https://github.com/vit-s/su_react",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -27,6 +27,10 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vit-s/su_react.git"
   },
   "eslintConfig": {
     "extends": [
