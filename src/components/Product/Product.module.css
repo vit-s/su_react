@@ -1,4 +1,5 @@
 @value red-color from "../../variables.nodules.css";
+@value green-color from "../../variables.nodules.css";
 
 .block {
   background: lightcyan;
@@ -27,9 +28,15 @@ button {
   padding: 5px 20px;
   margin: 10px 0;
   color: black;
-  background: lightgreen;
+  background: green-color;
   border: 1px solid darkolivegreen;
   border-radius: 5px;
+}
+
+button:hover {
+  color: green-color;
+  background: darkolivegreen;
+  cursor: pointer;
 }
 
 img {

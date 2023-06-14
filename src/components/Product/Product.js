@@ -27,11 +27,10 @@ let Product = ({
           : <p>Add name 👉 <a href="google.com">Edit profile</a></p>
       }
       <img src={imgUrl} alt={``}/>
-      <a href={buyLink} target={`_blank`}>{buyLinkName}</a>
       <p>Price $<span>{price}</span></p>
       <p className={`${style.qty}`}>Quantity: {qty} <span
         className={qtyClasses}>{inStock ? `Few left` : `In Stock`}</span></p>
-      <button type={"button"}>Get it</button>
+      <button type={"submit"} value={`Send request`}>Get it</button>
     </div>
   )
 }
