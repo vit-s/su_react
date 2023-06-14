@@ -10,7 +10,6 @@
 
 # production
 /build
-/github-pages.txt
 
 # misc
 .DS_Store
