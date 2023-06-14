@@ -1,5 +1,6 @@
 import React from "react"
 
+console.log(`Section =>> OK`)
 const Section = ({
   title = `Welcome title!`,
   classSection = `def_class`,
@@ -13,6 +14,7 @@ const Section = ({
       className={`${classSection} ${classSectionTwo}`}
       id={idSection}
     >
+      <h1>Section name</h1>
       {title && <h2>{title}</h2>}
       {children}
     </section>
