@@ -1,9 +1,7 @@
 import React from "react"
-// import "./Product.css"
 import style from './Product.module.css'
 
 let https    = 'https://'
-let reg_link = 'google.com'
 
 let Product = ({
   imgUrl = `${https}home.com`,
@@ -15,9 +13,7 @@ let Product = ({
 }) => {
   let PRODUCT_QTY = 50,
       inStock     = qty < PRODUCT_QTY,
-      // let qtyClasses = ['Product_qty', inStock ? `${style.available}` : `${style['not-available']}`].join(' ')
-      qtyClasses  = inStock ? style.available : style[`not-available`],
-      fastConnect = 'online'
+      qtyClasses  = inStock ? style.available : style[`not-available`]
 
   return (
     <div className={`${style.block}`}>
