@@ -3,27 +3,47 @@ import React, {Component} from 'react'
 console.log(`Counter =>> OK`)
 
 class Counter extends Component {
-  constructor() {
-    super();
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     value: this.props.initialValue
+  //   }
+  // }
+
+  static defaultProps = {initialValue: 1}
+  static propTypes = {}
+
+  state = {
+    value: this.props.initialValue,
+    step: this.props.step,
+    text: 'Hello'
   }
-
-
-  static defaultPops = {}
-  static propTypes   = {}
 
   handleIncrement = () => {
     console.log(`Inc =>> `)
     console.log(`Inc this =>> `, this)
+    this.setState((prevState, props) => {
+      return {
+        value: prevState.value += props.step
+      }
+    })
   }
 
   handleDecrement = () => {
     console.log(`Dec =>> `)
     console.log(`Dec this =>> `, this)
+    this.setState((prevState, props) => {
+      return {
+        value: prevState.value -= props.step
+      }
+    })
   }
 
   render() {
+    console.log(`state value =>> `, this.state.value)
     return (
       <div>
+        <h2>Counter section</h2>
         Counter:
         <button
           type={`button`}
@@ -34,7 +54,7 @@ class Counter extends Component {
         <span
           className={`count`}
         >
-          0
+          {this.state.value}
         </span>
         <button
           type={`button`}

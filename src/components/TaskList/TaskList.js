@@ -4,14 +4,11 @@ import Counter            from "../Counter"
 
 console.log(`TaskList =>> OK`)
 class TaskList extends Component {
-  static defaultPops = {}
-  static propTypes = {}
-
 
   render() {
     return (
       <Layout>
-        <Counter/>
+        <Counter initialValue={0} step={5}/>
       </Layout>
     )
   }

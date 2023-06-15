@@ -12,10 +12,6 @@ let App = () => {
     <>
       <h1>Welcome</h1>
       <TaskList/>
-      {/*Book list*/}
-      {/*<h2>Book list</h2>*/}
-      {/*<BookList books={favoriteBooks}/>*/}
-      {/*New product section*/}
       <Section title={`Best`} idSection={`welc_prod`}>
         <Product name={`Anana`} price={20} qty={10}
                  imgUrl={`https://images.unsplash.com/photo-1589606743932-747c74e7330e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5hbmFzfGVufDB8fDB8fHww&w=1000&q=80`}/>
