@@ -4,5 +4,7 @@
   margin-right: auto;
   padding-left: 12px;
   padding-right: 12px;
-  background: lightgreen;
+  background: lightcyan;
+  border: 1px solid lightblue;
+  width: 95vw;
 }

@@ -4,7 +4,8 @@ import Product       from "../Product"
 import Section       from "../Section"
 import BookList      from "../BookList"
 import favoriteBooks from "../../books.json"
-import TaskList      from "../TaskList"
+import TaskList        from "../TaskList"
+import CounterControls from "../CounterControls"
 
 console.log(`APP =>> OK`)
 let App = () => {
@@ -12,6 +13,7 @@ let App = () => {
     <>
       <h1>Welcome</h1>
       <TaskList/>
+      <CounterControls/>
       <Section title={`Best`} idSection={`welc_prod`}>
         <Product name={`Anana`} price={20} qty={10}
                  imgUrl={`https://images.unsplash.com/photo-1589606743932-747c74e7330e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5hbmFzfGVufDB8fDB8fHww&w=1000&q=80`}/>
