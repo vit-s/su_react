@@ -1,17 +1,25 @@
-import React, {Component} from 'react'
-import Layout             from "../Layout"
-import Counter            from "../Counter"
+import React from 'react'
 
-console.log(`TaskList =>> OK`)
-class TaskList extends Component {
-
-  render() {
-    return (
-      <Layout>
-        <Counter initialValue={0} step={5}/>
-      </Layout>
-    )
-  }
+const TaskList = ({tasks}) => {
+  console.log(`tasks =>> `, tasks)
+  return (
+    <ul className={`TaskList`}>
+      {tasks.map(({id, text}) => (
+        <li key={id} className={`TaskList-item`}>
+          <p className={`TaskList-text`}>
+            {id}
+            <br/>
+            {text}
+          </p>
+        </li>
+      ))}
+      <section className={`TaskList-actions`}>
+        <button type={`button`} className={`TaskList-button`}>
+          Delete task
+        </button>
+      </section>
+    </ul>
+  )
 }
 
 export default TaskList

@@ -5,7 +5,6 @@ console.log(`Layout =>> OK`)
 const Layout = ({children}) => {
   return (
     <>
-      <h2>Layout</h2>
       <div className={`${style.Layout}`}>{children}</div>
     </>
   )

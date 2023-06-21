@@ -1,18 +1,24 @@
-import React         from "react"
+import React           from "react"
 import './App.css'
-import Product       from "../Product"
-import Section       from "../Section"
-import BookList      from "../BookList"
-import favoriteBooks from "../../books.json"
+import Product         from "../Product"
+import Section         from "../Section"
+import BookList        from "../BookList"
+import favoriteBooks   from "../../books.json"
 import TaskList        from "../TaskList"
 import CounterControls from "../CounterControls"
+import CreateTask      from '../../utils/create-task'
+import SignupForm      from "../SignupForm"
+
+let task = []
+task.push(CreateTask())
 
 console.log(`APP =>> OK`)
 let App = () => {
   return (
     <>
+      <SignupForm/>
       <h1>Welcome</h1>
-      <TaskList/>
+      <TaskList tasks={task}/>
       <CounterControls/>
       <Section title={`Best`} idSection={`welc_prod`}>
         <Product name={`Anana`} price={20} qty={10}
