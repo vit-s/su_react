@@ -1,7 +1,6 @@
 .Layout {
-  padding-left: 12px;
-  margin: auto;
-  padding-right: 12px;
+  margin: 10px auto;
+  padding: 10px;
   background: lightcyan;
   border: 1px solid lightblue;
   width: 95vw;

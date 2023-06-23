@@ -8,6 +8,8 @@ import TaskList        from "../TaskList"
 import CounterControls from "../CounterControls"
 import CreateTask      from '../../utils/create-task'
 import SignupForm      from "../SignupForm"
+import Tabs            from "../Tabs"
+import tabs            from '../../tabs.json'
 
 let task = []
 task.push(CreateTask())
@@ -17,6 +19,8 @@ let App = () => {
   return (
     <>
       <SignupForm/>
+      <Tabs items={tabs}/>
+      <br/>
       <h1>Welcome</h1>
       <TaskList tasks={task}/>
       <CounterControls/>
