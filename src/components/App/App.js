@@ -19,6 +19,7 @@ let App = () => {
   return (
     <>
       <SignupForm/>
+      <br/>
       <Tabs items={tabs}/>
       <br/>
       <h1>Welcome</h1>
