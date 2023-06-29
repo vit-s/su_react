@@ -1,10 +1,11 @@
 import React from 'react'
 
-const CounterControls = () => {
+const CounterControls = ({onIncrement, onDecrement}) => {
   console.log(` =>> CounterControls`)
   return (
     <div>
-      <h1>CounterControls</h1>
+      <button type={`button`} onClick={onDecrement}>Decrement</button>
+      <button type={`button`} onClick={onIncrement}>Increment</button>
     </div>
   )
 }

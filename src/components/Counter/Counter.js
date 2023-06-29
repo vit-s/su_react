@@ -1,16 +1,17 @@
 import React, {Component} from 'react'
+import CounterControls    from "../CounterControls"
 
 console.log(`Counter =>> OK`)
 
 class Counter extends Component {
 
-  static defaultProps = {initialValue: 1}
+  static defaultProps = {initialValue: 1, step: 1, text: `Hello`}
   static propTypes    = {}
 
   state = {
     value: this.props.initialValue,
     step: this.props.step,
-    text: 'Hello',
+    text: this.props.text,
   }
 
   handleIncrement = () =>
@@ -27,23 +28,8 @@ class Counter extends Component {
       <div>
         <h2>Counter</h2>
         {this.state.text} Counter:
-        <button
-          type={`button`}
-          onClick={this.handleIncrement}
-        >
-          Increment
-        </button>
-        <span
-          className={`count`}
-        >
-          {this.state.value}
-        </span>
-        <button
-          type={`button`}
-          onClick={this.handleDecrement}
-        >
-          Decrement
-        </button>
+        <span className={`count`}>{this.state.value}</span>
+        <CounterControls onIncrement={this.handleIncrement} onDecrement={this.handleDecrement}/>
       </div>
     )
   }

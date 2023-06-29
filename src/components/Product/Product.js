@@ -26,6 +26,7 @@ let Product = ({
       }
       <img src={imgUrl} alt={``}/>
       <p>Price $<span>{price}</span></p>
+      <a href="#">{buyLinkName}</a>
       <p className={`${style.qty}`}>Quantity: {qty} <span
         className={qtyClasses}>{inStock ? `Few left` : `In Stock`}</span></p>
       <button type={"submit"} value={`Send request`}>Get it</button>

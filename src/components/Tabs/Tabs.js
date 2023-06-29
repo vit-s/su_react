@@ -1,5 +1,4 @@
 import React, {Component, PureComponent} from 'react'
-import {dividerClasses}                  from "@mui/material"
 import Layout                            from "../Layout"
 
 class Tabs extends Component {
