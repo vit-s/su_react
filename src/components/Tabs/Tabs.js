@@ -1,7 +1,7 @@
-import React, {Component, PureComponent} from 'react'
+import React, {Component, PureComponent} from 'react' // PureComponent works without re-rendering.
 import Layout                            from "../Layout"
 
-class Tabs extends Component {
+class Tabs extends PureComponent {
 
   state = {
     activeIdx: 0,
@@ -12,10 +12,10 @@ class Tabs extends Component {
   render() {
 
     let tab = this.props.items[this.state.activeIdx]
+    console.log(`Component  =>> `)
 
-    console.log(`Tabs =>> Render ${Date.now()}`)
-    console.log(`props =>> `, this.props)
     return (
+
       <Layout>
         {this.props.items.map((item, idx) => (
           <li key={item.label}>
