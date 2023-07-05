@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import CounterControls    from "../CounterControls"
 
-console.log(`Counter =>> OK`)
+console.log(`Counter class =>> OK`)
 
 class Counter extends Component {
 
@@ -23,7 +23,6 @@ class Counter extends Component {
       ({value: prevState.value -= props.step}))
 
   render() {
-    console.log(`state value =>> `, this.state.value)
     return (
       <div>
         <h2>Counter</h2>

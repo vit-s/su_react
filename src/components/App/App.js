@@ -1,15 +1,16 @@
-import React           from "react"
+import React         from "react"
 import './App.css'
-import Product         from "../Product"
-import Section         from "../Section"
-import BookList        from "../BookList"
-import favoriteBooks   from "../../books.json"
-import TaskList        from "../TaskList"
-import CreateTask      from '../../utils/create-task'
-import SignupForm      from "../SignupForm"
-import Tabs            from "../Tabs"
-import tabs            from '../../tabs.json'
-import Counter         from "../Counter"
+import Product       from "../Product"
+import Section       from "../Section"
+import BookList      from "../BookList"
+import favoriteBooks from "../../books.json"
+import TaskList      from "../TaskList"
+import CreateTask    from '../../utils/create-task'
+import SignupForm    from "../SignupForm"
+import Tabs          from "../Tabs"
+import tabs          from '../../tabs.json'
+import Counter from "../Counter"
+import Ax   from '../Ax'
 
 let task = []
 task.push(CreateTask())
@@ -18,6 +19,7 @@ console.log(`APP =>> OK`)
 let App = () => {
   return (
     <>
+      <Ax/>
       <SignupForm/>
       <br/>
       <Tabs items={tabs}/>

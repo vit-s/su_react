@@ -12,7 +12,7 @@ class Tabs extends PureComponent {
   render() {
 
     let tab = this.props.items[this.state.activeIdx]
-    console.log(`Component  =>> `)
+    console.log(`Component  =>> OK`)
 
     return (
 

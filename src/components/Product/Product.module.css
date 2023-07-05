@@ -22,6 +22,7 @@ a {
   background: lightblue;
   margin: 10px 0;
   font-size: calc(10px + 1vmin);
+  display: block;
 }
 
 button {

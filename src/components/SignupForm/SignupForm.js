@@ -53,8 +53,6 @@ class SignupForm extends Component {
 
     let {email, password, subscription, agreed, age} = this.state
 
-    console.log(`agreed =>> `, agreed)
-
     return (
       <Layout>
 
