@@ -1,4 +1,4 @@
-import React, {Component, PureComponent} from 'react' // PureComponent works without re-rendering.
+import React, {PureComponent} from 'react' // PureComponent works without re-rendering.
 import Layout                            from "../Layout"
 
 class Tabs extends PureComponent {
