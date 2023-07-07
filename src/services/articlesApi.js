@@ -1,13 +1,14 @@
 import axios from "axios"
 
-const ArticlesApi = (searchQuery) =>
-  axios
-  .get(`https://hn.algolia.com/api/v1/search?query=${searchQuery}`)
-  .then(res => res.data.hits)
+const ArticlesApi = (searchQuery, page = 0, hits = 5) => {
+  return axios
+  .get(`https://hn.algolia.com/api/v1/search?query=${searchQuery}&page=${page}&hitsPerPage=3`)
+  .then(res => {
+    console.log(` =>> `, res.data)
+    return res.data.hits
+  })
 
-const apis = {
-  ArticlesApi,
 }
 
-export default apis
+export default ArticlesApi
 

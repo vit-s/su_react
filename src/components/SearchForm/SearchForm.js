@@ -1,20 +1,21 @@
 import React, {Component} from 'react'
 
+console.log(`SearchForm =>> OK`)
+
 class SearchForm extends Component {
 
   state = {
-    inputValue: ''
+    inputValue: '',
   }
 
   handleSubmit = e => {
     e.preventDefault()
-    // console.log(`handleSubmit =>> ${this.state.inputValue}`)
     this.props.onSubmit(this.state.inputValue)
+    this.setState({inputValue: ''})
   }
 
   handleChange = e => {
     e.propertyIsEnumerable()
-    console.log(`handleChange =>> `)
     this.setState({inputValue: e.target.value})
   }
 
@@ -29,7 +30,7 @@ class SearchForm extends Component {
           <label>
             <input
               type="text"
-              defaultValue={inputValue}
+              value={inputValue}
               placeholder={`search...`}
               onChange={this.handleChange}/>
           </label>
