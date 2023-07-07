@@ -25,6 +25,14 @@ a {
   display: block;
 }
 
+input {
+  padding: 5px 10px;
+  margin: 10px 0;
+  border: 1px solid darkolivegreen;
+  border-radius: 5px;
+  text-align: left;
+}
+
 button {
   padding: 5px 20px;
   margin: 10px 10px;

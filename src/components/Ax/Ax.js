@@ -4,6 +4,8 @@ import Layout                 from "../Layout"
 import Spinner                from "../Spinner"
 import Error                  from "../Error"
 import articlesApi            from '../../services/articlesApi'
+import SearchForm             from '../SearchForm'
+
 
 
 class Ax extends PureComponent {
@@ -16,8 +18,12 @@ class Ax extends PureComponent {
 
   componentDidMount() {
     // console.log(`ArticlesApi =>> `, articlesApi.ArticlesApi('react'))
-    this.fetchArticles('ukraine')
+    this.fetchArticles('')
   }
+
+  // componentDidUpdate(prevProps, prevState, snapshot) {
+  //   this.fetchArticles('react')
+  // }
 
   fetchArticles = query => {
     articlesApi
@@ -33,6 +39,7 @@ class Ax extends PureComponent {
     return (
       <Layout>
         <h1>Articles</h1>
+        <SearchForm onSubmit={this.fetchArticles}/>
         {error && <Error message={`Something went wrong: ${error.message}`}/>}
         {loading && <div><Spinner message={`Pleas, wait...`}/></div>}
         {articles.length > 0 &&
