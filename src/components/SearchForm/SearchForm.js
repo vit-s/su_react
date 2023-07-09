@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 
 console.log(`SearchForm =>> OK`)
 
+
 class SearchForm extends Component {
 
   state = {
@@ -35,6 +36,7 @@ class SearchForm extends Component {
               onChange={this.handleChange}/>
           </label>
           <button type={`submit`}>Go</button>
+          <span>{this.props.hits} hits</span>
         </form>
       </div>
     )

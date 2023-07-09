@@ -16,6 +16,7 @@ class Ax extends PureComponent {
     loading: false,
     searchQuery: '',
     page: 0,
+    hits: 7,
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -47,12 +48,12 @@ class Ax extends PureComponent {
   }
 
   render() {
-    let {articles, error, loading} = this.state
+    let {articles, error, loading, hits} = this.state
 
     return (
       <Layout>
         <h1>Articles</h1>
-        <SearchForm onSubmit={this.handleSearchFormSubmit}/>
+        <SearchForm onSubmit={this.handleSearchFormSubmit} hits={hits}/>
         {error && <Error message={`Something went wrong: ${error.message}`}/>}
         {loading && <div><Spinner message={`Pleas, wait...`}/></div>}
         {articles.length > 0 &&
