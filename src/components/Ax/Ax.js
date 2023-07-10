@@ -16,7 +16,7 @@ class Ax extends PureComponent {
     loading: false,
     searchQuery: '',
     page: 0,
-    hits: 7,
+    hits: 3
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -27,11 +27,11 @@ class Ax extends PureComponent {
 
   fetchArticles = () => {
 
-    let {searchQuery, page} = this.state
+    let {searchQuery, page, hits} = this.state
     this.setState({loading: true})
 
 
-    articlesApi(searchQuery, page)
+    articlesApi(searchQuery, page, hits)
     .then(articles => this.setState(prevState => ({
       articles: [...prevState.articles, ...articles],
       page: prevState.page += 1,
@@ -40,9 +40,10 @@ class Ax extends PureComponent {
     .finally(() => this.setState({loading: false}))
   }
 
-  handleSearchFormSubmit = (query) => {
+  handleSearchFormSubmit = (query, hitsVal) => {
     this.setState({
       searchQuery: query,
+      hits: hitsVal,
       articles: [],
     })
   }
@@ -53,7 +54,7 @@ class Ax extends PureComponent {
     return (
       <Layout>
         <h1>Articles</h1>
-        <SearchForm onSubmit={this.handleSearchFormSubmit} hits={hits}/>
+        <SearchForm onSubmit={this.handleSearchFormSubmit}/>
         {error && <Error message={`Something went wrong: ${error.message}`}/>}
         {loading && <div><Spinner message={`Pleas, wait...`}/></div>}
         {articles.length > 0 &&
