@@ -49,7 +49,7 @@ class Ax extends PureComponent {
   }
 
   render() {
-    let {articles, error, loading, hits} = this.state
+    let {articles, error, loading} = this.state
 
     return (
       <Layout>
