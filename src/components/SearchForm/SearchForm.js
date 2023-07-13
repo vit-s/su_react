@@ -20,7 +20,6 @@ class SearchForm extends Component {
 
   handleHitsChange = e => {
     e.preventDefault()
-    console.log(` handleHitsChange =>> `, e.target.valueOf)
     this.setState({hitsValue: e.target.value})
   }
 

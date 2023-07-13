@@ -9,8 +9,6 @@ let Product = ({
   imgUrl = `${https}home.com`,
   name,
   price = 0,
-  buyLink = `${https}home.com from the default`,
-  buyLinkName = `Click from the default`,
   qty = 0,
 }) => {
   let PRODUCT_QTY = 50,
@@ -26,7 +24,6 @@ let Product = ({
       }
       <img src={imgUrl} alt={``}/>
       <p>Price $<span>{price}</span></p>
-      <a href="#">{buyLinkName}</a>
       <p className={`${style.qty}`}>Quantity: {qty} <span
         className={qtyClasses}>{inStock ? `Few left` : `In Stock`}</span></p>
       <button type={"submit"} value={`Send request`}>Get it</button>

@@ -5,7 +5,11 @@ const WithHigherOrderComponent = WrappedComponent => {
     render() {
       return (
         <div>
-          <WrappedComponent {...this.props} extraProp={`This prop from HOC`}/>
+          <WrappedComponent
+            {...this.props}
+            extraProp={`This prop from HOC`}
+            pizza={`Dominos`}
+          />
         </div>
       )
     }

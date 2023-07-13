@@ -11,7 +11,6 @@ import Tabs        from "../Tabs"
 import tabs        from '../../tabs.json'
 import Counter     from "../Counter"
 import Ax          from '../Ax'
-import MyComponent from "../MyComponent"
 import Patterns    from "../../views/Patterns"
 
 let task = []
@@ -22,7 +21,6 @@ console.log(`APP =>> OK`)
 let App = () => {
   return (
     <>
-      {/*<MyComponent/>*/}
       <Patterns/>
       <Ax/>
       <SignupForm/>
