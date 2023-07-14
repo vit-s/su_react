@@ -12,15 +12,21 @@ import tabs        from '../../tabs.json'
 import Counter     from "../Counter"
 import Ax          from '../Ax'
 import Patterns    from "../../views/Patterns"
+import AuthContext from "../../contexts/Auth"
 
 let task = []
 task.push(CreateTask())
+let user = {
+  name: 'Vova',
+  email: 'vova@email.com',
+  avatar: 'avatar.img'
+}
 
 console.log(`APP =>> OK`)
 
 let App = () => {
   return (
-    <>
+    <AuthContext.Provider value={user}>
       <Patterns/>
       <Ax/>
       <SignupForm/>
@@ -58,7 +64,7 @@ let App = () => {
           imgUrl={`https://images.unsplash.com/photo-1587223962930-cb7f31384c19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvY2t0YWlsfGVufDB8fDB8fHww&w=1000&q=80`}
         />
       </Section>
-    </>
+    </AuthContext.Provider>
   )
 }
 

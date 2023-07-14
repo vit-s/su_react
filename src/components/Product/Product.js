@@ -1,8 +1,6 @@
 import React from "react"
 import style from './Product.module.css'
 
-console.log(`Product =>> OK`)
-
 let https    = 'https://'
 
 let Product = ({
