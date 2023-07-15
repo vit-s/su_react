@@ -4,15 +4,17 @@ import Product       from "../Product"
 import Section     from "../Section"
 // import BookList      from "../BookList"
 // import favoriteBooks from "../../books.json"
-import TaskList    from "../TaskList"
-import CreateTask  from '../../utils/create-task'
-import SignupForm  from "../SignupForm"
-import Tabs        from "../Tabs"
-import tabs        from '../../tabs.json'
-import Counter     from "../Counter"
-import Ax          from '../Ax'
-import Patterns    from "../../views/Patterns"
-import AuthContext from "../../contexts/Auth"
+import TaskList       from "../TaskList"
+import CreateTask     from '../../utils/create-task'
+import SignupForm     from "../SignupForm"
+import Tabs           from "../Tabs"
+import tabs           from '../../tabs.json'
+import Counter        from "../Counter"
+import Ax             from '../Ax'
+import Patterns       from "../../views/Patterns"
+import AuthContext    from "../../contexts/Auth"
+import CounterHook    from "../CounterHook"
+import SignUpFormHook from "../SignUpFormHook"
 
 let task = []
 task.push(CreateTask())
@@ -27,6 +29,8 @@ console.log(`APP =>> OK`)
 let App = () => {
   return (
     <AuthContext.Provider value={user}>
+      <CounterHook/>
+      <SignUpFormHook/>
       <Patterns/>
       <Ax/>
       <SignupForm/>
