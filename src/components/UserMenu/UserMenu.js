@@ -18,7 +18,6 @@ const style = {
 const UserMenu = () => (
     <AuthContext.Consumer>
       {({name, avatar, email}) => {
-        console.log(name, avatar, email)
         return (
           <>
             <div style={style.container}>

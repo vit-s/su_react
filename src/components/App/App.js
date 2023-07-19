@@ -9,7 +9,7 @@ import CreateTask     from '../../utils/create-task'
 import SignupForm     from "../SignupForm"
 import Tabs           from "../Tabs"
 import tabs           from '../../tabs.json'
-import Counter        from "../Counter"
+// import Counter        from "../Counter"
 import Ax             from '../Ax'
 import Patterns       from "../../views/Patterns"
 import AuthContext    from "../../contexts/Auth"
@@ -39,7 +39,7 @@ let App = () => {
       <br/>
       <h1>Welcome</h1>
       <TaskList tasks={task}/>
-      <Counter step={2}/>
+      {/*<Counter step={2}/>*/}
       <Section
         title={`Best`}
         idSection={`welc_prod`}
