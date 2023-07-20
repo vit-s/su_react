@@ -15,7 +15,8 @@ import Patterns       from "../../views/Patterns"
 import AuthContext    from "../../contexts/Auth"
 import CounterHook    from "../CounterHook"
 import SignUpFormHook from "../SignUpFormHook"
-import Clock          from "../Clock"
+// import Clock from "../Clock"
+import News  from "../News"
 
 let task = []
 task.push(CreateTask())
@@ -30,7 +31,8 @@ console.log(`APP =>> OK`)
 let App = () => {
   return (
     <AuthContext.Provider value={user}>
-      <Clock/>
+      <News/>
+      {/*<Clock/>*/}
       <CounterHook/>
       <SignUpFormHook/>
       <Patterns/>

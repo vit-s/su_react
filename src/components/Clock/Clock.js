@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 
 const style = {
   clockFace: {
@@ -10,11 +10,15 @@ const style = {
 const Clock = () => {
   let [time, setTime] = useState(new Date())
 
+  const intervalID = useRef()
+
   useEffect(() => {
-    let intervalID = setInterval(() => {
+    intervalID.current = setInterval(() => {
       setTime(new Date())
     }, 1000)
-
+    return () => {
+      clearInterval(intervalID.current)
+    }
   })
 
   return (
