@@ -17,7 +17,7 @@ const News = () => {
     }
     fetchArticles()
     return () => {
-      
+      // function to cancel http request
     }
   }, [])
 
