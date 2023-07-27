@@ -6,6 +6,8 @@ const News = () => {
   let [error, setError] = useState(null)
   let [loading, setLoading] = useState(false)
 
+  console.log(`News error, loading =>> `, error, loading)
+
   useEffect(() => {
     setLoading(true)
     let fetchArticles = () => {

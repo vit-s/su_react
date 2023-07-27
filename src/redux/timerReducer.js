@@ -2,7 +2,7 @@ import {combineReducers} from "redux" // to export multiple reducers (in our cas
 import {Type}            from "./timerAction"
 
 // value reducer
-const valueReducer = (state = 0, action) => {
+const valueReducer = (state = [], action) => {
   switch(action.type) {
     case Type.INCREMENT:
       return state + action.payload

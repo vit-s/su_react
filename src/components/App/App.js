@@ -1,7 +1,7 @@
-import React         from "react"
+import React          from "react"
 import './App.css'
-import Product       from "../Product"
-import Section     from "../Section"
+import Product        from "../Product"
+import Section        from "../Section"
 // import BookList      from "../BookList"
 // import favoriteBooks from "../../books.json"
 import TaskList       from "../TaskList"
@@ -16,10 +16,11 @@ import AuthContext    from "../../contexts/Auth"
 import CounterHook    from "../CounterHook"
 import SignUpFormHook from "../SignUpFormHook"
 // import Clock from "../Clock"
-import News    from "../News"
-import Profile from "../Profile"
-import store from '../../redux/store'
-import {Provider} from 'react-redux'
+import News           from "../News"
+import Profile        from "../Profile"
+import store          from '../../redux/store'
+import {Provider}     from 'react-redux'
+import Timer          from "../Timer"
 
 
 let task = []
@@ -35,6 +36,7 @@ console.log(`APP =>> OK`)
 let App = () => {
   return (
     <Provider store={store}>
+      <Timer/>
     <AuthContext.Provider value={user}>
       <News/>
       {/*<Clock/>*/}
