@@ -18,6 +18,9 @@ import SignUpFormHook from "../SignUpFormHook"
 // import Clock from "../Clock"
 import News    from "../News"
 import Profile from "../Profile"
+import store from '../../redux/store'
+import {Provider} from 'react-redux'
+
 
 let task = []
 task.push(CreateTask())
@@ -31,6 +34,7 @@ console.log(`APP =>> OK`)
 
 let App = () => {
   return (
+    <Provider store={store}>
     <AuthContext.Provider value={user}>
       <News/>
       {/*<Clock/>*/}
@@ -75,6 +79,7 @@ let App = () => {
         />
       </Section>
     </AuthContext.Provider>
+      </Provider>
   )
 }
 
