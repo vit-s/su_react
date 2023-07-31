@@ -1,28 +1,32 @@
-import React                    from 'react'
-import {connect}                from 'react-redux'
+import React             from 'react'
+import {connect}         from 'react-redux'
 import * as timerActions from './../../redux/timerAction'
+import Layout            from "../Layout"
 
 const Timer = ({value, step, onIncrement, onDecrement}) => (
-  <div>
-    <button
-      type={`button`}
-      onClick={() => onIncrement}
-    >
-      &#8722;
-    </button>
-    <div>{value} minutes</div>
-    <button
-      type={`button`}
-      onClick={() => onDecrement}
-    >
-      &#43;
-    </button>
-  </div>
+  <Layout>
+    <h2>Timer</h2>
+    <div>
+      <button
+        type={`button`}
+        onClick={() => onDecrement(step)}
+      >
+        &#8722;
+      </button>
+      <div>minutes {value}</div>
+      <button
+        type={`button`}
+        onClick={() => onIncrement(step)}
+      >
+        &#43;
+      </button>
+    </div>
+  </Layout>
 )
 
 const mapState = state => ({
   value: state.timer.value,
-  step: state.timer.step
+  step: state.timer.step.value,
 })
 
 const mapDispatch = dispatch => ({

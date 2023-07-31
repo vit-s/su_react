@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios                        from "axios"
+import Layout                       from "../Layout"
 
 const News = () => {
   let [articles, setArticles] = useState([])
@@ -24,15 +25,18 @@ const News = () => {
   }, [])
 
   return (
-    <ul>
-      {articles.map(({objectID, title, url}) => (
-        <li key={objectID}>
-          <a href={url} target={`_blank`} rel={`noopener noreferrer`}>
-            {title}
-          </a>
-        </li>
-      ))}
-    </ul>
+    <Layout>
+      <h2>News</h2>
+      <ul>
+        {articles.map(({objectID, title, url}) => (
+          <li key={objectID}>
+            <a href={url} target={`_blank`} rel={`noopener noreferrer`}>
+              {title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </Layout>
   )
 }
 

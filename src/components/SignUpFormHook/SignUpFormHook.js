@@ -17,10 +17,6 @@ const SignUpFormHook = () => {
     console.log(`email ${email}, password ${password}`)
   }
 
-  // console.log(`Email, Password =>> `, email, password)
-
-
-
   return (
     <div>
       <h2>SignUpFormHook</h2>

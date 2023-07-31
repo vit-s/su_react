@@ -7,5 +7,4 @@ const rootReducer = combineReducers({
 })
 
 const store = createStore(rootReducer, devToolsEnhancer())
-console.log(`store =>> `, store)
 export default store

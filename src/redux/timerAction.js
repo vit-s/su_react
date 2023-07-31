@@ -8,13 +8,4 @@ export const Type = {
 
 export const increment = value => ({type: Type.INCREMENT, payload: value})
 export const decrement = value => ({type: Type.DECREMENT, payload: value})
-export const change_step = value => ({type: Type.CHANGE_STEP, payload: value})
-
-
-// const action = {
-//   type: 'ADD_ARTICLE',
-//   payload: {
-//     text: 'Redux is owesome',
-//   },
-// }
-
+export const changeStep = value => ({type: Type.CHANGE_STEP, payload: value})
