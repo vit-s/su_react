@@ -7,8 +7,8 @@ import Section        from "../Section"
 import TaskList       from "../TaskList"
 import CreateTask     from '../../utils/create-task'
 import SignupForm     from "../SignupForm"
-import Tabs           from "../Tabs"
-import tabs           from '../../tabs.json'
+import Tabs from "../Tabs"
+import tabs from '../../json/tabs.json'
 // import Counter        from "../Counter"
 import Ax             from '../Ax'
 import Patterns       from "../../views/Patterns"

@@ -1,5 +1,5 @@
-@value red-color from "../../variables.nodules.css";
-@value green-color from "../../variables.nodules.css";
+@value red-color from "../../css/variables.nodules.css";
+@value green-color from "../../css/variables.nodules.css";
 
 .block {
   background: lightcyan;
