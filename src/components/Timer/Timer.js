@@ -1,6 +1,6 @@
 import React             from 'react'
 import {connect}         from 'react-redux'
-import * as timerActions from './../../redux/timerAction'
+import * as timerActions from '../../redux/timer/timerAction'
 import Layout            from "../Layout"
 
 const Timer = ({value, step, onIncrement, onDecrement}) => (

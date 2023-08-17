@@ -2,7 +2,7 @@ import React             from 'react'
 import Select            from 'react-select'
 import Layout            from "../Layout"
 import {connect}         from "react-redux"
-import * as timerActions from '../../redux/timerAction'
+import * as timerActions from '../../redux/timer/timerAction'
 
 const options = [
   {value: 5, label: '5'},

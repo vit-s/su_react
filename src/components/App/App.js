@@ -7,8 +7,8 @@ import Section        from "../Section"
 import TaskList       from "../TaskList"
 import CreateTask     from '../../utils/create-task'
 import SignupForm     from "../SignupForm"
-import Tabs from "../Tabs"
-import tabs from '../../json/tabs.json'
+import Tabs           from "../Tabs"
+import tabs           from '../../json/tabs.json'
 // import Counter        from "../Counter"
 import Ax             from '../Ax'
 import Patterns       from "../../views/Patterns"
@@ -20,12 +20,13 @@ import News           from "../News"
 import Profile        from "../Profile"
 import store          from '../../redux/store'
 import {Provider}     from 'react-redux'
-import Timer        from "../Timer"
-import StepSelector from "../StepSelector"
-
+import Timer          from "../Timer"
+import StepSelector   from "../StepSelector"
 
 let task = []
+
 task.push(CreateTask())
+
 let user = {
   name: 'Vova',
   email: 'vova@email.com',

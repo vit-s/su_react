@@ -1,5 +1,5 @@
 import {combineReducers} from "redux" // to export multiple reducers (in our case 2 reducers)
-import {Type}            from "./timerAction"
+import {Type} from "./timerAction"
 
 // value reducer
 const valueReducer = (state = 0, action) => {
